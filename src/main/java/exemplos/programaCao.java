@@ -15,14 +15,14 @@ public class programaCao {
 			
 			Cao cao = new Cao();
 			
-			System.out.println("Informe o nome do cão: ");
-			cao.nome = input.nextLine();
+			System.out.print("Informe o nome do cão: ");
+			cao.setNome(input.nextLine());
 			
-			System.out.println("Informe a raça do cão: ");
-			cao.raca = input.nextLine();
+			System.out.print("Informe a raça do cão: ");
+			cao.setRaca(input.nextLine());
 			
-			System.out.println("Informe o peso do cão: ");
-			cao.peso = input.nextDouble();
+			System.out.print("Informe o peso do cão: ");
+			cao.setPeso(input.nextDouble()); 
 			
 			listaCaes[i] = cao;
 			
@@ -31,9 +31,9 @@ public class programaCao {
 		
 		for (int i = 0; i < listaCaes.length; i++) {
 			
-			if (listaCaes[i].peso > 15) {
+			if (listaCaes[i].getPeso() > 15) {
 				
-				System.out.println("Nome: " + listaCaes[i].nome);
+				System.out.println("Nome: " + listaCaes[i].getNome());
 				listaCaes[i].falar();
 			}
 		}
