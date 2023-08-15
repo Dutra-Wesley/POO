@@ -18,63 +18,49 @@ public class ProgramaVeiculo {
 		Moto[] listaMotos = {m1, m2, m3};
 		
 		//1 CALCULAR O VALOR TOTAL DOS CARROS.
-		calcularValorTotalCarros(listaCarros);
+		double valorTotalCarros = calcularValorTotalCarros(listaCarros);
+		System.out.println("O valor total dos carros é: R$" + valorTotalCarros);
 		
 		//2 INFORMAR O MODELO DO CARRO COM MAIOR POTÊNCIA
 		informarModeloCarroMaiorPotencia(listaCarros);
 		
 		//3 INFORMAR O VALOR TOTAL DAS MOTOS
-		calcularValorTotalMotos(listaMotos);
+		double valorTotalMotos = calcularValorTotalMotos(listaMotos);
+		System.out.println("O valor total das motos é: R$" + valorTotalMotos);
 		
 		//4 INFORMAR O MODELO E O FABRICANTE DA MOTO MAIS ANTIGA
 		informarModeloEFabricanteMaisAntigo(listaMotos);
 		
 		//5 CONTABILIZAR O VALOR DE TODOS OS VEÍCULOS
-		contabilizarValorTotalVeiculos(listaCarros, listaMotos);
+		contabilizarValorTotalVeiculos(valorTotalCarros, valorTotalMotos);
 		
 	}
 
-	private static void contabilizarValorTotalVeiculos(Carro[] listaCarros, Moto[] listaMotos) {
+	private static void contabilizarValorTotalVeiculos(double valorTotalCarros, double valorTotalMotos) {
 		
-		double valorTotalVeiculos = 0;
-		
-		for (int i = 0; i < listaCarros.length; i++) {
-			
-			valorTotalVeiculos += listaCarros[i].getValor();
-			
-		}
-		
-		for (int i = 0; i < listaMotos.length; i++) {
-			
-			valorTotalVeiculos += listaMotos[i].getValor();
-			
-		}
-		
-		System.out.println("O valor total dos veiculos é: R$" + valorTotalVeiculos);
+		double valorTotalVeiculos = valorTotalCarros + valorTotalMotos;
+		System.out.println("O valor total dos veículos é: R$" + valorTotalVeiculos);
 		
 	}
 
 	private static void informarModeloEFabricanteMaisAntigo(Moto[] listaMotos) {
 		
-		String[] modeloEFabricanteMaisAntigo = new String[2];
-		int motoMaisAntiga = 9999;
+		Moto motoMaisAntiga = listaMotos[0];
 		for (int i = 0; i < listaMotos.length; i++) {
 			
-			if (listaMotos[i].getAno() < motoMaisAntiga) {
+			if (listaMotos[i].getAno() < motoMaisAntiga.getAno()) {
 				
-				motoMaisAntiga = listaMotos[i].getAno();
-				modeloEFabricanteMaisAntigo[0] = listaMotos[i].getModelo();
-				modeloEFabricanteMaisAntigo[1] = listaMotos[i].getFabricante();
-				
+				motoMaisAntiga = listaMotos[i];
+			
 			}
 			
 		}
 		
-		System.out.println("A moto mais antiga é: " + modeloEFabricanteMaisAntigo[0] + " " + modeloEFabricanteMaisAntigo[1]);
+		System.out.println("A moto mais antiga é a " + motoMaisAntiga.getModelo() + " sua fabricante é a " + motoMaisAntiga.getFabricante());
 		
 	}
 
-	private static void calcularValorTotalMotos(Moto[] listaMotos) {
+	private static double calcularValorTotalMotos(Moto[] listaMotos) {
 		
 		double valorTotalMotos = 0;
 		for (int i = 0; i < listaMotos.length; i++) {
@@ -83,7 +69,7 @@ public class ProgramaVeiculo {
 			
 		}
 		
-		System.out.println("O valor total das motos é R$" + valorTotalMotos);
+		return valorTotalMotos;
 		
 	}
 
@@ -103,7 +89,7 @@ public class ProgramaVeiculo {
 		
 	}
 
-	private static void calcularValorTotalCarros(Carro[] listaCarros) {
+	private static double calcularValorTotalCarros(Carro[] listaCarros) {
 		
 		double valorTotalCarros = 0;
 		for (int i = 0; i < listaCarros.length; i++) {
@@ -111,7 +97,7 @@ public class ProgramaVeiculo {
 			
 		}
 		
-		System.out.println("O valor total dos carros é: R$" + valorTotalCarros);
+		return valorTotalCarros;
 		
 	}
 	
