@@ -2,7 +2,7 @@ package exemplos;
 
 import java.util.Scanner;
 
-public class programaCao {
+public class ProgramaCao {
 
 	public static void main(String[] args) {
 		
