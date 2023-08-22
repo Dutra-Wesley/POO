@@ -22,4 +22,11 @@ public class Carro extends Veiculo {
 		this.potenciaHP = potenciaHP;
 	} 
 	
+	@Override
+	public void calcularDepreciacao() {
+		super.calcularDepreciacao();
+		double depreciacao = this.getValor() - 100;
+		this.setValor(depreciacao);
+	}
+	
 }

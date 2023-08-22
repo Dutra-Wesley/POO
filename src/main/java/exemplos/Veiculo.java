@@ -52,4 +52,8 @@ public class Veiculo {
 		this.valor = valor;
 	}
 	
+	public void calcularDepreciacao() {
+		this.valor = this.valor * 0.95;
+	}
+	
 }

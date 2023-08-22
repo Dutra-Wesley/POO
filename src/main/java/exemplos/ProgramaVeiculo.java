@@ -34,6 +34,16 @@ public class ProgramaVeiculo {
 		//5 CONTABILIZAR O VALOR DE TODOS OS VEÍCULOS
 		contabilizarValorTotalVeiculos(valorTotalCarros, valorTotalMotos);
 		
+		System.out.println("Valor antes da depreciação: " + c1.getValor());
+		c1.calcularDepreciacao();
+		System.out.println("Valor depois da depreciação: " + c1.getValor());
+		
+		System.out.println("------------------------------");
+		
+		System.out.println("Valor antes da depreciação: " + m1.getValor());
+		m1.calcularDepreciacao();
+		System.out.println("Valor depois da depreciação: " + m1.getValor());
+		
 	}
 
 	private static void contabilizarValorTotalVeiculos(double valorTotalCarros, double valorTotalMotos) {
