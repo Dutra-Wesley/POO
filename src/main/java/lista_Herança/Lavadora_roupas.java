@@ -1,37 +1,17 @@
 package lista_Herança;
 
-public class Lavadora_roupas {
+public class Lavadora_roupas extends Eletrodomesticos {
 
-	private String modelo;
-	private String fabricante;
 	private double capacidadeQuilos;
 	
-	public Lavadora_roupas(String modelo, String fabricante, double capacidade) {
+	public Lavadora_roupas(String modelo, String fabricante, double capacidadeQuilos) {
 		super();
-		this.modelo = modelo;
-		this.fabricante = fabricante;
-		this.capacidadeQuilos = capacidade;
+		this.capacidadeQuilos = capacidadeQuilos;
 	}
 	
 	public Lavadora_roupas () {
 		super();
 		
-	}
-
-	public String getModelo() {
-		return modelo;
-	}
-
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
-	}
-
-	public String getFabricante() {
-		return fabricante;
-	}
-
-	public void setFabricante(String fabricante) {
-		this.fabricante = fabricante;
 	}
 
 	public double getCapacidade() {
