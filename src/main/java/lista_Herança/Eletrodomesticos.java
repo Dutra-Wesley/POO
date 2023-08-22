@@ -5,7 +5,6 @@ public class Eletrodomesticos {
 	private String modelo;
 	private String fabricante;
 	private double kilowatt;
-	private double consumoMes;
 	
 	public Eletrodomesticos(String modelo, String fabricante, double kilowatt) {
 		super();
@@ -43,11 +42,15 @@ public class Eletrodomesticos {
 		this.kilowatt = kilowatt;
 	}
 
-	public double calcularConsumoDeEnergiaDoMes () {
+	public void calcularConsumoDeEnergia () {
 		
 		this.kilowatt = this.kilowatt * 31;
-		return consumoMes;
 		
 	}
 	
+	public void calcularConsumoDeEnergia (int dias) {
+		
+		this.kilowatt = this.kilowatt * dias;
+		
+	}
 }
