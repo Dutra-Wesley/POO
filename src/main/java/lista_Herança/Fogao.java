@@ -4,14 +4,13 @@ public class Fogao extends Eletrodomesticos {
 
 	private int bocas;
 	
-	public Fogao(String modelo, String fabricante, int bocas) {
-		super();
+	public Fogao(String modelo, String fabricante, double kilowatt, int bocas) {
+		super(modelo, fabricante, kilowatt);
 		this.bocas = bocas;
 	}
-	
+
 	public Fogao () {
-		super();
-		
+		super();	
 	}
 
 	public int getBocas() {

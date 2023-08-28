@@ -4,14 +4,13 @@ public class Geladeira extends Eletrodomesticos {
 
 	private double capacidadeLitros;
 	
-	public Geladeira(String modelo, String fabricante, double capacidadeLitros) {
-		super();
+	public Geladeira(String modelo, String fabricante, double kilowatt, double capacidadeLitros) {
+		super(modelo, fabricante, kilowatt);
 		this.capacidadeLitros = capacidadeLitros;
 	}
-	
+
 	public Geladeira () {
 		super();
-		
 	}
 
 	public double getCapacidade() {
