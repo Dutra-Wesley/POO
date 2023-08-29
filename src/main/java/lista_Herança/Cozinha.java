@@ -10,39 +10,12 @@ public class Cozinha {
 		Microondas microondas = new Microondas("MI41S", "Electrolux", 15.5, 31);
 		Forno_Eletrico forno = new Forno_Eletrico("PFE48IP", "Philco", 50, 46);
 		
-		double consumoForno = forno.calcularConsumoDeEnergia(10);
-		double consumoMes = calcularConsumoMes(geladeira, fogao, lava_louca, microondas, consumoForno);
-		double consumoDia = calcularConsumoDia(geladeira, fogao, lava_louca, microondas, consumoForno);
+		double consumoMensal = geladeira.calcularConsumoDeEnergia() + fogao.calcularConsumoDeEnergia() + lava_louca.calcularConsumoDeEnergia() + microondas.calcularConsumoDeEnergia() + forno.calcularConsumoDeEnergia();
+		System.out.println(consumoMensal);
 		
-		System.out.println("Seu consumo mensal foi: " + consumoMes + " kilowatts");
-		System.out.println("Seu consumo em 10 dias foi: " + consumoDia + " kilowatts");
+		double consumoDias = geladeira.calcularConsumoDeEnergia(10) + fogao.calcularConsumoDeEnergia(10) + lava_louca.calcularConsumoDeEnergia(10) + microondas.calcularConsumoDeEnergia(10) + forno.calcularConsumoDeEnergia(10);
+		System.out.println(consumoDias);
 		
-	}
-
-	private static double calcularConsumoDia(Geladeira geladeira, Fogao fogao, Lava_Louca lava_louca,
-			Microondas microondas, double consumoForno) {
-		
-		geladeira.calcularConsumoDeEnergia(10);
-		fogao.calcularConsumoDeEnergia(10);
-		lava_louca.calcularConsumoDeEnergia(10);
-		microondas.calcularConsumoDeEnergia(10);
-		
-		double consumoDia = geladeira.getKilowatt() + fogao.getKilowatt() + lava_louca.getKilowatt() + microondas.getKilowatt() + consumoForno;
-		
-		return consumoDia;
-	}
-
-	private static double calcularConsumoMes(Geladeira geladeira, Fogao fogao, Lava_Louca lava_louca,
-			Microondas microondas, double consumoForno) {
-		
-		geladeira.calcularConsumoDeEnergia();
-		fogao.calcularConsumoDeEnergia();
-		lava_louca.calcularConsumoDeEnergia();
-		microondas.calcularConsumoDeEnergia();
-		
-		double consumoMes = geladeira.getKilowatt() + fogao.getKilowatt() + lava_louca.getKilowatt() + microondas.getKilowatt() + consumoForno;
-		
-		return consumoMes;
 	}
 
 }

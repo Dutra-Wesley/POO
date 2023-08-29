@@ -22,11 +22,26 @@ public class Forno_Eletrico extends Eletrodomesticos{
 	}
 
 	@Override
+	public double calcularConsumoDeEnergia() {
+		// MANEIRA SEM USAR O MÉTODO DA SUPERCLASSE
+		return (this.getKilowatt() * 31) + this.calcularDesperdicio();
+	}
+
+	@Override
 	public double calcularConsumoDeEnergia(int dias) {
+		// USANDO MÉTODO DA SUPERCLASSE
+		return super.calcularConsumoDeEnergia(dias) + this.calcularDesperdicio(dias);
+	}
+
+	private double calcularDesperdicio () {
+		// MANEIRA SEM USAR O MÉTODO DA SUPERCLASSE
+		return (this.getKilowatt() * 31) * 0.25;
+	}
 	
-		double consumoCozinhar = this.getKilowatt() * (dias * 0.75); 
-		
-		return consumoCozinhar;
+	// OVERLOAD (SOBRECARGA)
+	private double calcularDesperdicio (int dias) {
+		// USANDO MÉTODO DA SUPERCLASSE
+		return super.calcularConsumoDeEnergia(dias) * 0.25;
 	}
 	
 }

@@ -5,8 +5,6 @@ public class Eletrodomesticos {
 	private String modelo;
 	private String fabricante;
 	private double kilowatt;
-	private double kilowattMes;
-	private double kilowattDia;
 	
 	public Eletrodomesticos(String modelo, String fabricante, double kilowatt) {
 		super();
@@ -45,14 +43,12 @@ public class Eletrodomesticos {
 
 	public double calcularConsumoDeEnergia () {
 		
-		this.kilowatt = this.kilowatt * 31;
-		return kilowattMes;
+		return this.getKilowatt() * 31;
 	}
 	
 	// OVERLOAD (SOBRECARGA)
 	public double calcularConsumoDeEnergia (int dias) {
 		
-		this.kilowatt = this.kilowatt * dias;
-		return kilowattDia;
+		return this.getKilowatt() * dias;
 	}
 }
