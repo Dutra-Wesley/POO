@@ -1,15 +1,15 @@
-package lista_Herança;
+package lista_Herança1;
 
-public class Lava_Louca extends Eletrodomesticos {
+public class Microondas extends Eletrodomesticos {
 
 	private double capacidadeLitros;
 	
-	public Lava_Louca(String modelo, String fabricante, double kilowatt, double capacidadeLitros) {
+	public Microondas(String modelo, String fabricante, double kilowatt, double capacidadeLitros) {
 		super(modelo, fabricante, kilowatt);
 		this.capacidadeLitros = capacidadeLitros;
 	}
 
-	public Lava_Louca () {
+	public Microondas () {
 		super();
 	}
 
@@ -20,5 +20,5 @@ public class Lava_Louca extends Eletrodomesticos {
 	public void setCapacidade(double capacidade) {
 		this.capacidadeLitros = capacidade;
 	}
-
+	
 }

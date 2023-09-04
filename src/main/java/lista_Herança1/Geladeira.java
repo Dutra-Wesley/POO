@@ -1,15 +1,15 @@
-package lista_Herança;
+package lista_Herança1;
 
-public class Microondas extends Eletrodomesticos {
+public class Geladeira extends Eletrodomesticos {
 
 	private double capacidadeLitros;
 	
-	public Microondas(String modelo, String fabricante, double kilowatt, double capacidadeLitros) {
+	public Geladeira(String modelo, String fabricante, double kilowatt, double capacidadeLitros) {
 		super(modelo, fabricante, kilowatt);
 		this.capacidadeLitros = capacidadeLitros;
 	}
 
-	public Microondas () {
+	public Geladeira () {
 		super();
 	}
 

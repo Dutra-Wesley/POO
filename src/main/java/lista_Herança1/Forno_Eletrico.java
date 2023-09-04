@@ -1,4 +1,4 @@
-package lista_Herança;
+package lista_Herança1;
 
 public class Forno_Eletrico extends Eletrodomesticos{
 

@@ -1,15 +1,15 @@
-package lista_Herança;
+package lista_Herança1;
 
-public class Geladeira extends Eletrodomesticos {
+public class Lava_Louca extends Eletrodomesticos {
 
 	private double capacidadeLitros;
 	
-	public Geladeira(String modelo, String fabricante, double kilowatt, double capacidadeLitros) {
+	public Lava_Louca(String modelo, String fabricante, double kilowatt, double capacidadeLitros) {
 		super(modelo, fabricante, kilowatt);
 		this.capacidadeLitros = capacidadeLitros;
 	}
 
-	public Geladeira () {
+	public Lava_Louca () {
 		super();
 	}
 
@@ -20,5 +20,5 @@ public class Geladeira extends Eletrodomesticos {
 	public void setCapacidade(double capacidade) {
 		this.capacidadeLitros = capacidade;
 	}
-	
+
 }
