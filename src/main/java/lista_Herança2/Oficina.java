@@ -19,30 +19,27 @@ public class Oficina {
 		Serrote serrote = new Serrote("serrote", "ote", 6, 0.8, "universal", 9, 45);
 		
 		double consumoMes = (furadeira.getPotenciaWatts() * 3) + (lixadeira.getPotenciaWatts() * 2) + (serra.getPotenciaWatts() * 4) * 30;
-		System.out.println(formatador.format(consumoMes));
+		System.out.println("Consumo mês: " + formatador.format(consumoMes));
 		
 		double consumoSemana = (furadeira.getPotenciaWatts() * 3) + (lixadeira.getPotenciaWatts() * 2) + (serra.getPotenciaWatts() * 4) * 7;
-		System.out.println(formatador.format(consumoSemana));
+		System.out.println("Consumo semana: " + formatador.format(consumoSemana));
 		
-		Ferramentas[] ferramentasManuais = new Ferramentas[5];
+		// DESCOBRIR MAIOR VIDA UTIL ENTRE AS FERRAMENTAS MANUAIS
+		Ferramentas[] ferramentas = {alicate1, alicate2, martelo1, martelo2, serrote};
+		Ferramentas ferramentaMaiorVidaUitl = ferramentas[0];
 		
-		ferramentasManuais[0] = alicate1;
-		ferramentasManuais[1] = alicate2;
-		ferramentasManuais[2] = martelo1;
-		ferramentasManuais[3] = martelo2;
-		ferramentasManuais[4] = serrote;
-		
-		Ferramentas maiorVidaUtil = ferramentasManuais[0];
-		
-		for (int i = 0; i < ferramentasManuais.length; i++) {
+		for (Ferramentas ferramenta : ferramentas) {
 			
-			if (ferramentasManuais[i].getPercentualDesgaste() < maiorVidaUtil.getPercentualDesgaste()) {
+			if (ferramenta.calcularVidaUtil() > ferramentaMaiorVidaUitl.calcularVidaUtil()) {
 				
-				maiorVidaUtil = ferramentasManuais[i];
+				ferramentaMaiorVidaUitl = ferramenta;
 			}
 		}
 		
-		System.out.println(maiorVidaUtil.getFabricante()+ " " + maiorVidaUtil.getModelo());
+		System.out.println("Maior vida útil: " + ferramentaMaiorVidaUitl.getModelo());
+		System.out.println("Vida útil em horas: " + formatador.format( ferramentaMaiorVidaUitl.calcularVidaUtil()));
+		System.out.println("Vida útil em dias: " + formatador.format( ferramentaMaiorVidaUitl.calcularVidaUtil("dias")));
+		System.out.println("Vida útil em semanas: " + formatador.format(ferramentaMaiorVidaUitl.calcularVidaUtil("semana")));
 		
 	}
 

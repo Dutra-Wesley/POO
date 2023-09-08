@@ -1,6 +1,6 @@
 package lista_Herança2;
 
-public class Ferramentas {
+public class Ferramentas{
 
 	private String modelo;
 	private String fabricante;
@@ -53,13 +53,23 @@ public class Ferramentas {
 
 	public double calcularVidaUtil () {
 		
-		return this.getPercentualDesgaste();
+		return (100/this.getPercentualDesgaste());
 	}
 	
 	// OVERLOAD (SOBRECARGA)
-	public double calcularVidaUtil (String diaOuSemana) {
+	public double calcularVidaUtil (String periodo) {
 		
-		return this.getPercentualDesgaste() * Double.parseDouble(diaOuSemana);
+		double retorno = 0;
+		
+		if (periodo.equalsIgnoreCase("semana")) {
+			
+			retorno = this.calcularVidaUtil() / 24 / 7;
+			
+		} else {
+
+			retorno = this.calcularVidaUtil() / 24;
+		}
+		return retorno;
 	}
 	
 	

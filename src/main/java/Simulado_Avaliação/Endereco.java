@@ -60,6 +60,11 @@ public class Endereco {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+
+	@Override
+	public String toString() {
+		return "Rua: " + this.rua + " | Número: " + this.numero + " | Bairro: " + this.bairro + " | Cidade: " + this.cidade + " | Estado: " + this.estado;
+	}
 	
 	
 }

@@ -1,27 +1,17 @@
 package lista_Herança2;
 
-public class Martelo extends Ferramentas{
+public class Martelo extends FerramentasManuais{
 
-	private String tipo;
 	private double tamanhoMilimetro;
-	
+
 	public Martelo(String modelo, String fabricante, double pesoQuilos, double percentualDesgaste, String tipo,
 			double tamanhoMilimetro) {
-		super(modelo, fabricante, pesoQuilos, percentualDesgaste);
-		this.tipo = tipo;
+		super(modelo, fabricante, pesoQuilos, percentualDesgaste, tipo);
 		this.tamanhoMilimetro = tamanhoMilimetro;
 	}
 	
-	public Martelo () {
+	public Martelo() {
 		super();
-	}
-
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
 	}
 
 	public double getTamanhoMilimetro() {
