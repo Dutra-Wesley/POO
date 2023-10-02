@@ -1,19 +1,19 @@
-package simulado_Avaliação2;
+package Simulado_Avaliação;
 
-public abstract class Pessoa {
+public class Empresa {
 
 	private String nome;
-	private int idade;
+	private String cnpj;
 	private Endereco endereco;
 	
-	public Pessoa(String nome, int idade, Endereco endereco) {
+	public Empresa(String nome, String cnpj, Endereco endereco) {
 		super();
 		this.nome = nome;
-		this.idade = idade;
+		this.cnpj = cnpj;
 		this.endereco = endereco;
 	}
 	
-	public Pessoa() {
+	public Empresa () {
 		super();
 	}
 
@@ -25,12 +25,12 @@ public abstract class Pessoa {
 		this.nome = nome;
 	}
 
-	public int getIdade() {
-		return idade;
+	public String getCnpj() {
+		return cnpj;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
 	public Endereco getEndereco() {
@@ -43,7 +43,7 @@ public abstract class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Pessoa [nome=" + nome + ", idade=" + idade + ", endereco=" + endereco + "]";
+		return super.toString();
 	}
 	
 	

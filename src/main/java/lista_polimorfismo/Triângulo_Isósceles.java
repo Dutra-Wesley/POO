@@ -5,8 +5,8 @@ public class Triângulo_Isósceles extends Triângulo{
 	private double base;
 	private double altura;
 	
-	public Triângulo_Isósceles(String nome, double base, double altura) {
-		super(nome);
+	public Triângulo_Isósceles(double base, double altura) {
+		super();
 		this.base = base;
 		this.altura = altura;
 	}
@@ -32,13 +32,13 @@ public class Triângulo_Isósceles extends Triângulo{
 	}
 
 	@Override
-	public double calcularArea() {
-		return (this.base * this.altura) / 2;
+	public void calcularArea() {
+		
 	}
 
 	@Override
-	public double calcularPerimetro() {
-		return this.base + this.altura;
+	public void calcularPerimetro() {
+		
 	}
 
 

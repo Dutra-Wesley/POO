@@ -22,13 +22,13 @@ public class Quadrado extends Forma_Geométrica {
 	}
 
 	@Override
-	public double calcularArea() {
-		return this.lado * this.lado;
+	public void calcularArea() {
+		
 	}
 
 	@Override
-	public double calcularPerimetro() {
-		return this.lado * 4;
+	public void calcularPerimetro() {
+		
 	}
 
 	

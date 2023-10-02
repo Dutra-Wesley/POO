@@ -5,16 +5,16 @@ public class Triângulo_Retângulo extends Triângulo {
 	private double base;
 	private double altura;
 	
-	public Triângulo_Retângulo(String nome, double base, double altura) {
-		super(nome);
+	public Triângulo_Retângulo(double base, double altura) {
+		super();
 		this.base = base;
 		this.altura = altura;
 	}
-	
+
 	public Triângulo_Retângulo() {
 		super();
 	}
-
+	
 	public double getBase() {
 		return base;
 	}
@@ -32,13 +32,13 @@ public class Triângulo_Retângulo extends Triângulo {
 	}
 
 	@Override
-	public double calcularArea() {
-		return (this.base * this.altura) / 2;
+	public void calcularArea() {
+		
 	}
 
 	@Override
-	public double calcularPerimetro() {
-		return this.base + this.altura;
+	public void calcularPerimetro() {
+		
 	}
 
 	

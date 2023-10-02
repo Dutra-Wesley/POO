@@ -1,4 +1,4 @@
-package simulado_Avaliação1;
+package Simulado_Avaliação;
 
 public class Laboratorio extends Empresa {
 
