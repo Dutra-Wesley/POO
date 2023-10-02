@@ -1,4 +1,4 @@
-package Simulado_Avaliação;
+package simulado_Avaliação1;
 
 import java.util.Scanner;
 

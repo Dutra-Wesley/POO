@@ -4,8 +4,8 @@ public class Triângulo_Equilátero extends Triângulo{
 
 	private double lado;
 	
-	public Triângulo_Equilátero(double lado) {
-		super();
+	public Triângulo_Equilátero(String nome, double lado) {
+		super(nome);
 		this.lado = lado;
 	}
 
@@ -22,13 +22,13 @@ public class Triângulo_Equilátero extends Triângulo{
 	}
 
 	@Override
-	public void calcularArea() {
-		
+	public double calcularArea() {
+		return ((this.lado * this.lado) * (Math.sqrt(3))) / 4;
 	}
 
 	@Override
-	public void calcularPerimetro() {
-		
+	public double calcularPerimetro() {
+		return this.lado * 3;
 	}
 
 	

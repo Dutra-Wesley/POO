@@ -21,9 +21,9 @@ public abstract class Forma_Geométrica {
 		this.nome = nome;
 	}
 	
-	public abstract void calcularArea();
+	public abstract double calcularArea();
 	
-	public abstract void calcularPerimetro();
+	public abstract double calcularPerimetro();
 	
 	
 }

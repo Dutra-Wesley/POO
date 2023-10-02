@@ -32,13 +32,13 @@ public class Retângulo extends Forma_Geométrica {
 	}
 
 	@Override
-	public void calcularArea() {
-		
+	public double calcularArea() {
+		return this.ladoA * this.ladoB;
 	}
 
 	@Override
-	public void calcularPerimetro() {
-		
+	public double calcularPerimetro() {
+		return 2 * (this.ladoA + this.ladoB);
 	}
 
 

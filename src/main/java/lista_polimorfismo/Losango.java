@@ -52,13 +52,13 @@ public class Losango extends Forma_Geométrica {
 	}
 
 	@Override
-	public void calcularArea() {
-		
+	public double calcularArea() {
+		return (this.diagonalMaior * this.diagonalMenor) / 2;
 	}
 	
 	@Override
-	public void calcularPerimetro() {
-		
+	public double calcularPerimetro() {
+		return 2 * (this.ladoA + this.ladoB);
 	}
 	
 	
