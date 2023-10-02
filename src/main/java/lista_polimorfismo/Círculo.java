@@ -22,13 +22,13 @@ public class Círculo extends Forma_Geométrica {
 	}
 
 	@Override
-	public void calcularArea() {
-		
+	public double calcularArea() {
+		return Math.PI * (this.raio * this.raio);
 	}
 
 	@Override
-	public void calcularPerimetro() {
-		
+	public double calcularPerimetro() {
+		return 2 * Math.PI * this.raio;
 	}
 	
 	
