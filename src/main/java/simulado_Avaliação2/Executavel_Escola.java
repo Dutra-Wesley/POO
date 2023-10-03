@@ -56,8 +56,7 @@ public class Executavel_Escola {
 		escola.identificarRegenteMaisNovo();
 		
 		//3 - E
-		escola.listarAlunosPorCidade(7);
-		
+		escola.listarAlunosPorCidade("São José");
 		
 	}
 

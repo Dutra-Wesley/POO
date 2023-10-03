@@ -77,9 +77,19 @@ public class Escola {
 	
 	public void identificarRegenteMaisNovo() {
 			
+		Professor regenteMaisNovo = this.turmas[0].getRegente();
+		
+		for (int i = 0; i < turmas.length; i++) {
+			if (this.turmas[i].getRegente().getIdade() < regenteMaisNovo.getIdade()) {
+				
+				regenteMaisNovo = this.turmas[i].getRegente();
+			}
+		}
+		System.out.println(regenteMaisNovo.getNome());
 	}
 	
-	public void listarAlunosPorCidade(int serie) {
+	public void listarAlunosPorCidade(String cidade) {
+		
 		
 	}
 	
