@@ -68,8 +68,14 @@ public class Turma {
 		}
 	}
 	
-	public void identificarRegenteMaisNovo() {
+	public void listarAlunosPorCidade(String cidade) {
 		
+		for (Aluno aluno : alunos) {
+			
+			if (aluno.getEndereco().getCidade().equalsIgnoreCase(cidade)) {
+				System.out.println(aluno.getNome());
+			}
+		}
 	}
 	
 	

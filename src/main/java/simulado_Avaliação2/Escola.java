@@ -90,7 +90,10 @@ public class Escola {
 	
 	public void listarAlunosPorCidade(String cidade) {
 		
-		
+		System.out.println("Alunos de " + cidade + ":");
+		for (Turma turma : turmas) {
+			turma.listarAlunosPorCidade(cidade);
+		}
 	}
 	
 	
