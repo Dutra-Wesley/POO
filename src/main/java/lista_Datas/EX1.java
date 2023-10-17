@@ -1,6 +1,5 @@
 package lista_Datas;
 
-import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
@@ -18,9 +17,8 @@ public class EX1 {
 		String data = input.nextLine();
 		
 		LocalDate dataInformada = LocalDate.parse(data, formatador);
-		DayOfWeek diaDaSemana = dataInformada.getDayOfWeek();
 		
-		System.out.println(diaDaSemana.getDisplayName(TextStyle.FULL, new Locale("pt", "BR")));
+		System.out.println(dataInformada.getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("pt", "BR")));
 		
 		input.close();
 	}

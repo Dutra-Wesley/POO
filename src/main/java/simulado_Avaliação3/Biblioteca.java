@@ -1,6 +1,7 @@
 package simulado_Avaliação3;
 
 import java.time.Period;
+import java.util.HashSet;
 
 public class Biblioteca {
 
@@ -102,7 +103,7 @@ public class Biblioteca {
 		
 		Period diferencaAutores = Period.between(autorMaisVelho.getDataNascimento(), autorMaisNovo.getDataNascimento());
 		System.out.println("Autor mais novo: " + autorMaisNovo);
-		System.out.println("Autor mais Velho: " + autorMaisVelho);
+		System.out.println("Autor mais velho: " + autorMaisVelho);
 		System.out.println("Sua diferença de idade é: " + diferencaAutores.getDays() + "DIAS " + diferencaAutores.getMonths() + "MESES " + diferencaAutores.getYears() + "ANOS");
 	}
 	
@@ -120,12 +121,18 @@ public class Biblioteca {
 	
 	public void identificarAutoresDaCidade (String cidade) {
 		
+		HashSet<String> listaNomes = new HashSet<String>();
 		for (Obra obra : listaObras) {
 			
 			if (obra.getAutor().getEnderecoAutor().getCidade().equalsIgnoreCase(cidade)) {
 				
-				System.out.println(obra.getAutor());
+				listaNomes.add(obra.getAutor().getNome());
 			}
+		}
+		
+		for (String nome : listaNomes) {
+			
+			System.out.println(nome);
 		}
 	}
 	

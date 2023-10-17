@@ -1,6 +1,5 @@
 package lista_Datas;
 
-import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
@@ -12,15 +11,14 @@ public class EX2 {
 
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Informe um dia: ");
+		System.out.print("Informe uma quantidade de dias: ");
 		int dia = input.nextInt();
 		
 		LocalDate data = LocalDate.now();
 		
 		LocalDate dataFutura = data.plusDays(dia);
-		DayOfWeek diaDaSemana = dataFutura.getDayOfWeek();
 		
-		System.out.println("Daqui a " + dia + " dia(s), será dia: " + dataFutura.getDayOfMonth() + "/" + dataFutura.getMonthValue() + "/" + dataFutura.getYear() + " " + diaDaSemana.getDisplayName(TextStyle.FULL, new Locale("pt", "BR")));
+		System.out.println("Daqui a " + dia + " dia(s), será dia: " + dataFutura.getDayOfMonth() + "/" + dataFutura.getMonthValue() + "/" + dataFutura.getYear() + " (" + dataFutura.getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("pt", "BR")) + ")");
 		
 		input.close();
 	}

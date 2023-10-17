@@ -1,5 +1,6 @@
 package lista_Datas;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,6 +20,9 @@ public class EX5 {
 		
 		LocalDate dataAgora = LocalDate.now();
 		
+		Duration tempoDeVida = Duration.between(dataEHoraNascimento, dataAgora);
+		
+		System.out.println("O tempo de vida do usuário é: " +tempoDeVida.toHoursPart());
 		
 		input.close();
 	}
