@@ -1,7 +1,6 @@
 package lista_Datas;
 
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -14,15 +13,13 @@ public class EX5 {
 		DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		
 		System.out.print("Informe sua data de nascimento no padrão 'dd/MM/yyyy' e sua hora de nascimento no padrão 'HH:mm:ss': ");
-		String data = input.nextLine();
+		LocalDateTime dataEHoraNascimento = LocalDateTime.parse(input.nextLine(), formatador);
 		
-		LocalDateTime dataEHoraNascimento = LocalDateTime.parse(data, formatador);
-		
-		LocalDate dataAgora = LocalDate.now();
+		LocalDateTime dataAgora = LocalDateTime.now();
 		
 		Duration tempoDeVida = Duration.between(dataEHoraNascimento, dataAgora);
 		
-		System.out.println("O tempo de vida do usuário é: " +tempoDeVida.toHoursPart());
+		System.out.println("O tempo de vida do usuário é: " + tempoDeVida.toHours() + " HORAS " + tempoDeVida.toMinutesPart() + " MINUTOS " + tempoDeVida.toSecondsPart() + " SEGUNDOS");
 		
 		input.close();
 	}
